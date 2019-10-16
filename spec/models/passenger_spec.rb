@@ -1,23 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Passenger do
-  let(:passenger) { subject }
-
-  it 'has many taxis through rides' do
-    taxi = Taxi.create
-
-    passenger.taxis << taxi
-    passenger.save
-
-    expect(taxi.passengers).to include(passenger)
-  end
-
-  it 'has many rides' do
-    ride = Ride.create
-
-    passenger.rides << ride
-    passenger.save
-
-    expect(ride.passenger).to eq(passenger)
-  end
+RSpec.describe Passenger, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
